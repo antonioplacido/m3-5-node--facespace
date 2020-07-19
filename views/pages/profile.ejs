@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<div class="profile-page">
+    <div class='profile-page--banner'></div>
+ <h2> <%= user.name %>  </h> 
+  <img src ="<%- user.avatarUrl %>" class= 'profile-page__user--avatar' alt ="display pic">
+</div>
+    <h3 class="profile-page__friends"><%= user.name %>'s Friends</p>
+    <ul>
+      <!-- loop over the array of friends -->
+      <!-- each friend's image and name should be visible. -->
+    </ul>
+  </div>
+  <div>
+<%- include('../partials/footer') %>
