@@ -1,14 +1,17 @@
 <%- include('../partials/header') %>
 <div class="profile-page">
     <div class='profile-page--banner'></div>
- <h2> <%= user.name %>  </h> 
-  <img src ="<%- user.avatarUrl %>" class= 'profile-page__user--avatar' alt ="display pic">
-</div>
-    <h3 class="profile-page__friends"><%= user.name %>'s Friends</p>
-    <ul>
-      <!-- loop over the array of friends -->
-      <!-- each friend's image and name should be visible. -->
+
+<img class="profile-page__user--avatar" src ="<%- user.avatarUrl %>" >
+<h3 class="profile-page__user"> <%= user.name %>  </h> 
+    <h4 class="profile-page__friends"><%= user.name %>'s Friends</p>
+    <ul class="profile-page__friends--list">
+        <% friends.forEach(user => { %>
+            <li class="friend">
+                <p><%= user.name %></p>
+              <img src="<%= user.avatarUrl %>" />
+            </li>
+        <% }) %>
     </ul>
   </div>
-  <div>
 <%- include('../partials/footer') %>
